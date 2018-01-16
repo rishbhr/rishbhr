@@ -6,6 +6,8 @@ font-family: 'Cairo', sans-serif;
 
 */
 
+/*---------------universal---------------*/
+
 *{
     box-sizing: border-box;
     transition: all ease-in-out 250ms;
@@ -23,16 +25,15 @@ img {
 }
 
 .container {
-    width: 95%;
     max-width: 70em;
     margin: 0 auto;
+    width: 95%;
 }
 
 .clearfix::after, . section::after, footer::after {
+    clear: both;
     content: '';
     display: block;
-    clear: both;
-
 }
 
 .unstyled-list {
@@ -154,8 +155,9 @@ p:last-of-type {
 }
 
 .button-accent:hover, .button-accent:focus {
-    background: #00ff6c;
-    color: #232323;
+    background: rgb(204, 63, 12);
+    border-color: rgb(104, 104, 104);
+    color: rgb(104, 104, 104);
 }
 
 .button-dark {
@@ -165,7 +167,7 @@ p:last-of-type {
 
 .button-dark:hover, .button-dark:focus {
     background: #232323;
-    color: #00ff6c;
+    color: rgb(204, 63, 12);
 }
 
 /*---------------header---------------*/
@@ -187,16 +189,16 @@ nav li {
 }
 
 nav a {
-    color: #FFF;
+    color: rgb(104, 104, 104);
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 1rem;
     padding: .5em;
 }
 
 nav a:hover, nav a:focus {
-    color: #ddd;
+    color: rgb(204, 63, 12);
 }
 
 @media (min-width:60rem) {
@@ -212,7 +214,7 @@ nav a:hover, nav a:focus {
 /*---------------upper intro---------------*/
 
 .upper-intro {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/intro.jpg);
     background-size: cover;
     background-position: center;
     color: #FFF;
@@ -266,7 +268,7 @@ nav a:hover, nav a:focus {
     }
 
     .about-intro {
-        background-image: url("../img/who-we-are.jpg");
+        background-image: url("../img/laguna_beach.jpg");
         background-repeat: no-repeat;
         padding-bottom: 20em;
     }
@@ -339,10 +341,17 @@ nav a:hover, nav a:focus {
     }
 }
 
+@media (min-width: 90rem) {
+    .portfolio {
+        padding-bottom: 20rem;
+    }
+
+}
+
 /*---------------cta---------------*/
 
 .cta {
-    background-color: #00ff6c;
+    background-color: rgb(104, 104, 104);
     padding: 3em 0;
 }
 
@@ -354,4 +363,10 @@ footer {
     text-align: left;
     padding: 7em 0;
 
+}
+
+/*---------------logo---------------*/
+header img {
+    width: 10%;
+    height: 10%;
 }
